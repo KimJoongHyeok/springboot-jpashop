@@ -32,4 +32,5 @@ public class MemberRepository {
                 .getResultList();
     }
 
+    //윈도우 인텔리 커밋 테스트
 }
