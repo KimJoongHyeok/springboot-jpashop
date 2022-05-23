@@ -28,7 +28,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         List<Member> findMembers = memberRepository.findByName(member.getName()); //실무에서는 동시에 가입될 가능성을 없애기 위해 DB에서도 유니크로 한번 더 거르는걸 추천
         if (!findMembers.isEmpty()) {
-            throw new IllegalArgumentException("이미 존재하는 회원입니다.");
+            throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }
 
